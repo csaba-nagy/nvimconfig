@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ 
-  { import = "csabanagy.plugins" } 
+  { import = "csabanagy.plugins" },
+  { import = "csabanagy.plugins.lsp" }
 }, {}
 )
