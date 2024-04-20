@@ -31,7 +31,8 @@ return {
         "tailwindcss",
         "lua_ls",
         "emmet_ls",
-        "intelephense"
+        "intelephense",
+        "volar"
       },
     })
   end,
