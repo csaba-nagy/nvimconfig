@@ -1,0 +1,4 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "bef521ac89c8d423f9d092e37b58e8af0c099309" },
+  "rose-pine": { "branch": "main", "commit": "17b466e79479758b332a3cac12544a3ad2be6241" }
+}
