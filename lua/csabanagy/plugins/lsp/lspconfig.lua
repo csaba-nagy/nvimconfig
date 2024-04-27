@@ -1,4 +1,3 @@
-
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
@@ -89,7 +88,7 @@ return {
         -- configure emmet language server
         lspconfig["emmet_ls"].setup({
           capabilities = capabilities,
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss" },
         })
       end,
       ["lua_ls"] = function()
@@ -109,7 +108,18 @@ return {
           },
         })
       end,
+      ["eslint"] = function()
+        lspconfig["eslint"].setup({
+          capabilities = capabilities,
+          -- format on save
+          on_attach = function(client, bufnr)
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              buffer = bufnr,
+              command = "EslintFixAll",
+            })
+          end,
+        })
+      end,
     })
   end,
 }
-
