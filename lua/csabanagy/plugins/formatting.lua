@@ -5,25 +5,18 @@ return {
     local conform = require("conform")
 
     conform.setup({
+      formatters = {},
       formatters_by_ft = {
-        -- javascript = { "prettier" },
-        -- typescript = { "prettier" },
-        -- javascriptreact = { "prettier" },
-        -- typescriptreact = { "prettier" },
-        -- css = { "prettier" },
-        -- html = { "prettier" },
-        -- json = { "prettier" },
-        -- yaml = { "prettier" },
-        -- markdown = { "prettier" },
+        -- for js, ts, vue filetypes, eslint is used to fix the errors automatically
+        -- see in lspconfig.lua
         lua = { "stylua" },
-        -- vue = { "prettier" },
       },
       format_on_save = {
-        enable = false,
         lsp_fallback = true,
         async = false,
         timeout_ms = 500,
       },
+      log_level = vim.log.levels.WARN,
     })
 
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()
