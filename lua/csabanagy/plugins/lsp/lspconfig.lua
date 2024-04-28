@@ -109,6 +109,7 @@ return {
       end,
       ["eslint"] = function()
         lspconfig["eslint"].setup({
+          filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
           capabilities = capabilities,
           -- format on save
           on_attach = function(client, bufnr)
