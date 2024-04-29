@@ -91,5 +91,4 @@ opt.updatetime = 50
 
 -- copy and paste to/from the system clipboard
 -- NOTE: Clipboard provider (xclip for example need to be installed)
-opt.clipboard:append { "unnamed", "unnamedplus" }
-
+opt.clipboard:append({ "unnamed", "unnamedplus" })
