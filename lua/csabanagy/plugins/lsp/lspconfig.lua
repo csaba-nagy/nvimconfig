@@ -120,6 +120,36 @@ return {
           end,
         })
       end,
+      ["tsserver"] = function()
+        lspconfig["tsserver"].setup({
+          capabilities = capabilities,
+          init_options = {
+            plugins = {
+              {
+                name = "@vue/typescript-plugin",
+                location = "/usr/lib/node_modules/@vue/typescript-plugin",
+                languages = { "typescript", "javascript", "vue" },
+              },
+            },
+          },
+          filetypes = {
+            "javascript",
+            "typescript",
+            "vue",
+          },
+        })
+      end,
+      ["volar"] = function()
+        lspconfig["volar"].setup({
+          capabilities = capabilities,
+        })
+      end,
+      --      ["tailwindcss"] = function()
+      --        lspconfig["tailwindcss"].setup({
+      --          capabilities = capabilities,
+      --          filetypes = { "html", "vue", "css" },
+      --        })
+      --      end,
     })
   end,
 }

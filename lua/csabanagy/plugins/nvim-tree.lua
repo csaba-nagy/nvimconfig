@@ -7,7 +7,7 @@ return {
         sorter = "case_sensitive",
       },
       view = {
-        width = 30,
+        width = 50,
         side = "right",
       },
       renderer = {
@@ -17,5 +17,7 @@ return {
         dotfiles = true,
       },
     })
+
+    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
   end,
 }
