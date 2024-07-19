@@ -150,6 +150,18 @@ return {
       --          filetypes = { "html", "vue", "css" },
       --        })
       --      end,
+      ["phpcs"] = function()
+        lspconfig["phpcs"].setup({
+          capabilities = capabilities,
+          filetypes = { "php" },
+          phpcs = {
+            bin = "phpcs",
+            options = {
+              "--standard=./phpcs.xml",
+            },
+          },
+        })
+      end,
     })
   end,
 }

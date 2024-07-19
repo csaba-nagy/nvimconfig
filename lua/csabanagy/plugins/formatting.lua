@@ -5,11 +5,22 @@ return {
     local conform = require("conform")
 
     conform.setup({
-      formatters = {},
+      formatters = {
+        --        php = {
+        --          command = "php-cs-fixer",
+        --          args = {
+        --            "fix",
+        --            "--rules=@PSR12",
+        --            "$FILENAME",
+        --          },
+        --          stdin = false,
+        --        },
+      },
       formatters_by_ft = {
         -- for js, ts, vue filetypes, eslint is used to fix the errors automatically
         -- see in lspconfig.lua
         lua = { "stylua" },
+        -- php = { "php" },
       },
       format_on_save = {
         lsp_fallback = true,

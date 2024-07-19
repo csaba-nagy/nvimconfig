@@ -8,6 +8,7 @@ return {
       javascript = { "eslint" },
       typescript = { "eslint" },
       vue = { "eslint" },
+      php = { "phpcs" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
