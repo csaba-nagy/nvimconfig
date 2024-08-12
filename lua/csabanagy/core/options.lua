@@ -18,11 +18,11 @@ opt.colorcolumn = "80"
 
 -- Sets the number of spaces that a tab character represents.
 -- In this configuration, tabs are represented as 2 spaces.
-opt.tabstop = 2
+opt.tabstop = 4
 
 --  Sets the number of spaces used for indentation.
 --  This also determines how much an auto-indent will add.
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 
 -- Enables the use of spaces instead of tabs.
 -- When pressing the “Tab” key, Neovim inserts spaces based on the tabstop value.

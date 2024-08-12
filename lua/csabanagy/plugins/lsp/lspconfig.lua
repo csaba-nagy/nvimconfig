@@ -150,16 +150,9 @@ return {
       --          filetypes = { "html", "vue", "css" },
       --        })
       --      end,
-      ["phpcs"] = function()
-        lspconfig["phpcs"].setup({
+      ["easy-coding-standard"] = function()
+        lspconfig["easy-coding-standard"].setup({
           capabilities = capabilities,
-          filetypes = { "php" },
-          phpcs = {
-            bin = "phpcs",
-            options = {
-              "--standard=./phpcs.xml",
-            },
-          },
         })
       end,
     })
