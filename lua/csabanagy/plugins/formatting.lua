@@ -21,6 +21,7 @@ return {
         -- see in lspconfig.lua
         lua = { "stylua" },
         php = { "easy-coding-standard" },
+        go = { "gofumpt" },
       },
       format_on_save = {
         lsp_fallback = true,

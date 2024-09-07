@@ -35,6 +35,7 @@ return {
         "lua_ls",
         "emmet_ls",
         "volar",
+        "gopls",
       },
     })
 
