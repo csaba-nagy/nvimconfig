@@ -22,6 +22,7 @@ return {
         lua = { "stylua" },
         php = { "easy-coding-standard" },
         go = { "gofumpt" },
+        html = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,
