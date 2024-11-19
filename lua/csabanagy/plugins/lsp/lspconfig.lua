@@ -107,54 +107,6 @@ return {
           },
         })
       end,
-      ["eslint"] = function()
-        lspconfig["eslint"].setup({
-          filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
-          capabilities = capabilities,
-          -- format on save
-          on_attach = function(client, bufnr)
-            vim.api.nvim_create_autocmd("BufWritePre", {
-              buffer = bufnr,
-              command = "EslintFixAll",
-            })
-          end,
-        })
-      end,
-      ["tsserver"] = function()
-        lspconfig["tsserver"].setup({
-          capabilities = capabilities,
-          init_options = {
-            plugins = {
-              {
-                name = "@vue/typescript-plugin",
-                location = "/usr/lib/node_modules/@vue/typescript-plugin",
-                languages = { "typescript", "javascript", "vue" },
-              },
-            },
-          },
-          filetypes = {
-            "javascript",
-            "typescript",
-            "vue",
-          },
-        })
-      end,
-      ["volar"] = function()
-        lspconfig["volar"].setup({
-          capabilities = capabilities,
-        })
-      end,
-      --      ["tailwindcss"] = function()
-      --        lspconfig["tailwindcss"].setup({
-      --          capabilities = capabilities,
-      --          filetypes = { "html", "vue", "css" },
-      --        })
-      --      end,
-      ["easy-coding-standard"] = function()
-        lspconfig["easy-coding-standard"].setup({
-          capabilities = capabilities,
-        })
-      end,
       ["gopls"] = function()
         lspconfig["gopls"].setup({
           capabilities = capabilities,

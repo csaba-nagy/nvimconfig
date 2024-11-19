@@ -26,7 +26,7 @@ return {
   config = function()
     require("catppuccin").setup({
       flavour = "mocha",
-      transparent_background = false,
+      transparent_background = true,
       custom_highlights = function(colors)
         return {
           Comment = { fg = colors.flamingo },
@@ -34,17 +34,28 @@ return {
         }
       end,
       styles = {
-        comments = { "italic" },
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = { "italic" },
+        functions = {},
+        keywords = { "italic", "bold" },
+        strings = { "italic" },
+        variables = {},
+        numbers = {},
+        booleans = { "italic" },
+        properties = {},
         types = { "bold" },
-        integrations = {
-          nvimtree = true,
-          cmp = true,
-          treesitter = true,
-          indent_blankline = {
-            enabled = true,
-            -- scope_color = , -- catppuccin color (eg. `lavender`) Default: text
-            colored_indent_levels = false,
-          },
+        operators = {},
+        -- miscs = {}, -- Uncomment to turn off hard-coded styles,
+      },
+      integrations = {
+        nvimtree = true,
+        cmp = true,
+        treesitter = true,
+        indent_blankline = {
+          enabled = true,
+          -- scope_color = , -- catppuccin color (eg. `lavender`) Default: text
+          colored_indent_levels = false,
         },
       },
     })
