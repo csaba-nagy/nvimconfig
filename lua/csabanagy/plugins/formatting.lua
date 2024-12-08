@@ -17,8 +17,6 @@ return {
         --        },
       },
       formatters_by_ft = {
-        -- for js, ts, vue filetypes, eslint is used to fix the errors automatically
-        -- see in lspconfig.lua
         lua = { "stylua" },
         php = { "easy-coding-standard" },
         go = { "gofumpt" },

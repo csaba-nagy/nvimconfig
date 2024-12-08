@@ -90,6 +90,18 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss" },
         })
       end,
+      ["phpactor"] = function()
+        lspconfig["phpactor"].setup({
+          capabilities = capabilities,
+          filetypes = { "php" },
+        })
+      end,
+      ["twiggy_language_server"] = function()
+        lspconfig["twiggy_language_server"].setup({
+          capabilities = capabilities,
+          filetypes = { "twig, tpl" },
+        })
+      end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
