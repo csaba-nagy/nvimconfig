@@ -14,7 +14,7 @@ opt.number = true
 opt.showmode = false
 
 -- Column
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 
 -- Sets the number of spaces that a tab character represents.
 -- In this configuration, tabs are represented as 2 spaces.
