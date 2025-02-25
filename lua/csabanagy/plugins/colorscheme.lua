@@ -1,12 +1,11 @@
 -- CATPUCCIN
---
 -- return {
 --   "catppuccin/nvim",
 --   name = "catppuccin",
 --   priority = 1000,
 --   config = function()
 --     require("catppuccin").setup({
---       flavour = "mocha",
+--       flavour = "latte",
 --       transparent_background = false,
 --       custom_highlights = function(colors)
 --         return {
@@ -54,29 +53,37 @@
 --     vim.cmd("colorscheme gruber-darker")
 --   end,
 -- }
---
+
 -- AYU
 --
+-- return {
+--   "Shatur/neovim-ayu",
+--   name = "ayu",
+--   priority = 1000,
+--   config = function()
+--     require("ayu").setup({
+--       mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+--       terminal = true, -- Set to `false` to let terminal manage its own colors.
+--       overrides = {
+--         Normal = { bg = "None" },
+--         NormalFloat = { bg = "none" },
+--         ColorColumn = { bg = "None" },
+--         SignColumn = { bg = "None" },
+--         Folded = { bg = "None" },
+--         FoldColumn = { bg = "None" },
+--         CursorLine = { bg = "None" },
+--         CursorColumn = { bg = "None" },
+--         VertSplit = { bg = "None" },
+--       }, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+--     })
+--     vim.cmd("colorscheme ayu-mirage")
+--   end,
+-- }
 return {
-  "Shatur/neovim-ayu",
-  name = "ayu",
+  "p00f/alabaster.nvim",
+  name = "alabaster",
   priority = 1000,
   config = function()
-    require("ayu").setup({
-      mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-      terminal = true, -- Set to `false` to let terminal manage its own colors.
-      overrides = {
-        Normal = { bg = "None" },
-        NormalFloat = { bg = "none" },
-        ColorColumn = { bg = "None" },
-        SignColumn = { bg = "None" },
-        Folded = { bg = "None" },
-        FoldColumn = { bg = "None" },
-        CursorLine = { bg = "None" },
-        CursorColumn = { bg = "None" },
-        VertSplit = { bg = "None" },
-      }, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
-    })
-    vim.cmd("colorscheme ayu-mirage")
+    vim.cmd("colorscheme alabaster")
   end,
 }

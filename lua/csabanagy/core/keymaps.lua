@@ -53,3 +53,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Go to definition and declaration remap (not elegant, but it works)
 keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+
+-- Toggle background
+keymap.set("n", "<leader>tb", ":lua toggle_background()<CR>", { noremap = true, silent = true })
